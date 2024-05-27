@@ -3,14 +3,13 @@ import functions
 import time
 
 now = time.strftime("%b %d, %Y %I:%M:%S %p")
+print("Currently, ")
 print("It is", now)
 while True:
     user_action = input("Type add, view, edit, complete or exit: ").strip().lower()
 
     # if 'add' in user_action[0:4]:
     if user_action.startswith("add"):
-        # todo = input("Enter a todo: ").strip() + "\n"
-
         todo = user_action[4:]
     
         todos = functions.get_todos()
