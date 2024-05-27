@@ -8,7 +8,6 @@ print("It is", now)
 while True:
     user_action = input("Type add, view, edit, complete or exit: ").strip().lower()
 
-    # if 'add' in user_action[0:4]:
     if user_action.startswith("add"):
         todo = user_action[4:]
     
@@ -22,13 +21,6 @@ while True:
             
     elif user_action.startswith("view"):
         todos = functions.get_todos()
-
-        # new_todos = []
-        # for item in todos:
-        #     new_item = item.strip('\n')
-        #     new_todos.append(new_item)
-
-        # new_todos = [item.strip('\n') for item in todos]
 
         for index, item in enumerate(todos, start=1):
             item = item.strip('\n')
